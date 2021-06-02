@@ -1,0 +1,98 @@
+@import "themes/themes.css";
+@import url('http://fonts.cdnfonts.com/css/old-london');
+@import url('http://fonts.cdnfonts.com/css/nunito');
+
+body {
+    background-color: var(--bgcolor);
+    width: 65%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+body, body * {
+    transition: all 0.5s;
+    transition-property: stroke, fill, color background-color;
+}
+
+img#pic-profile {
+    width: 22rem;
+    height: 34.75rem;
+    object-fit: cover;
+}
+
+.nav-text-link, p {
+    font-size: 1.15rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav-text-link {
+    color: var(--accentcolor);
+    font-weight: 700;
+    width: fit-content;
+    margin-right: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-text-link[selected] {
+    color: var(--maincolor);
+}
+
+p {
+    color: var(--textcolor);
+    font-weight: 400;
+    line-height: 1.55rem;
+}
+
+h1 {
+    font-size: 8.25rem;
+    font-family: 'Old London', sans-serif;
+    color: var(--maincolor);
+    width: fit-content;
+    position: relative;
+    /* background-image: linear-gradient(120deg, var(--accentcolor) 0%, var(--accentcolor) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.3em;
+    background-position: 0 72%; */
+}
+h1::before{
+    content: "";
+    background-image: linear-gradient(120deg, var(--accentcolor) 0%, var(--accentcolor) 100%);
+    position: absolute;
+    height: 0.3em;
+    bottom: 15%;
+    margin-left: 2rem;
+    z-index: -1;
+    transform: skew(-22.5deg);
+    width: 95%;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: 'Nunito', sans-serif;
+    margin-top: -.75rem;
+    margin-bottom: 1rem;
+    color: var(--accentcolor);
+}
+
+nav, .wrapper {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    gap: 5rem;
+}
+
+nav {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+}
+
+#nav-text {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+#text-title {
+    /* margin: auto 0; */
+    margin-top: 20%;
+    width: max(50%, 30rem)
+}
