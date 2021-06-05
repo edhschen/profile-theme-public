@@ -39,18 +39,20 @@ var nav = $("#nav-text"),
 navItems.click(function(e){
     var href = $(this).attr("href"),
         offsetTop = href === "#" ? 0 : $(href).position().top + $(href).parent().scrollTop();
-    console.log(href, offsetTop)
+    // console.log(href, offsetTop)
     $('#content-scroll').stop().animate({ 
         scrollTop: offsetTop
     }, 500);
     e.preventDefault();
+    $(this).attr("selected", "")
 });
       
 
 $("#content-scroll").scroll(function() {
     var fromTop = $(this).scrollTop();
+    var elemHeight = $(this).height()
     var curr = scrollItems.map(function() {
-        if ($(this).offset().top - $(this).parent().offset().top  < fromTop) 
+        if ($(this).position().top < elemHeight/2) 
         // distance from elem to top of viewport - the distance from frame to top top of viewport
         // cutoffs are relative to the TOP of section div
             return this;

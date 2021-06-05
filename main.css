@@ -9,14 +9,14 @@
 
 body {
     background-color: var(--bgcolor);
-    width: 65%;
+    width: max(65%, 970px);
     margin: 0 auto;
     max-width: 1200px;
 }
 
 body, body *:not(.theme-text) {
     transition: all 0.5s;
-    transition-property: stroke, fill, color background-color;
+    transition-property: stroke, fill, color, background-color, width;
 }
 
 img#pic-profile {
@@ -59,6 +59,14 @@ p {
     line-height: 1.7rem;
 }
 
+.text-primary {
+    color: var(--accentcolor)
+}
+
+.text-secondary {
+    font-size: 1rem;
+}
+
 h1 {
     font-size: 7.25rem;
     font-family: 'Rolling Bold', sans-serif;
@@ -95,6 +103,13 @@ h3 {
     font-family: 'Rolling Bold', sans-serif;
     color: var(--accentcolor);
     margin-bottom: 0.5rem;
+}
+
+.content-block {
+    margin-bottom: 1rem;
+}
+.content-block:last-of-type {
+    margin-bottom: 0;
 }
 
 nav, .wrapper {
@@ -167,4 +182,37 @@ hr {
 
 #title-static {
     min-width: 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: max-content max-content;
+    align-items: baseline;
+    gap: 0 1rem;
+}
+.content-grid .text-descrip {
+    grid-column: 2;
+    /* margin-top: -0.5rem; */
+    margin-top: -0.2rem;
+}
+.content-grid .text-primary, .content-grid .text-name {
+    margin-top: 0.75rem;
+}
+
+.content-grid .text-descrip, .content-grid .text-name {
+    line-height: 1.4rem;
+}
+.text-secondary span {
+    white-space: nowrap;
+    margin-right: 0.95rem;
+}
+.text-secondary.text-descrip.text-name {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contact {
+    min-height: 0;
+    margin-top: 3rem;
 }
