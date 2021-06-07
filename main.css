@@ -24,6 +24,7 @@ img#pic-profile {
     /* height: 34.75rem; */
     object-fit: cover;
     user-select: none;
+    align-self: flex-start;
 }
 
 .nav-text-link, p {
@@ -60,7 +61,21 @@ p {
 }
 
 .text-primary {
-    color: var(--accentcolor)
+    color: var(--accentcolor);
+    display: flex;
+    align-items:  center;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+}
+.link svg{
+    height: 1.1em;
+    margin-left: 0.1em;
+}
+.link:hover path {
+    fill: var(--maincolor) !important;
 }
 
 .text-secondary {
@@ -72,6 +87,8 @@ h1 {
     font-family: 'Rolling Bold', sans-serif;
     color: var(--maincolor);
     width: fit-content;
+    width: -moz-fit-content;
+    display: table;
     position: relative;
     /* background-image: linear-gradient(120deg, var(--accentcolor) 0%, var(--accentcolor) 100%);
     background-repeat: no-repeat;
@@ -116,6 +133,9 @@ nav, .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
+}
+.wrapper {
+    margin-bottom: 3rem;
 }
 
 nav {
@@ -167,9 +187,13 @@ hr {
     flex-basis: 0px;
     flex-grow: 1;
     position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 #content-scroll::-webkit-scrollbar {
     width: 0;
+    /* background: transparent;
+    -webkit-appearance: none; */
 }
 .content-section {
     min-height: 100%;

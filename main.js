@@ -4,28 +4,36 @@ theme_current = 0
 $(function() {
     const query = window.location.search;
     const params = new URLSearchParams(query);
-    const preset = themes.indexOf(params.get("theme"))
-    if (preset >= 0) {
+    const theme_param = params.get("theme")
+    const preset = theme_param ? themes.indexOf(theme_param) : +localStorage.getItem("theme")
+
+    if (preset >= 0 && typeof preset == "number") {
         $("html").removeClass().addClass(themes[preset] + "-theme")
-        $("#theme-toggle .theme-text").text(themes[theme_current])
+        $("#theme-toggle .theme-text").text(themes[preset])
+        localStorage.setItem("theme", preset)
+        theme_current = preset
     }
 
     $("#theme-toggle").click(function() {
         theme_current = theme_current + 1 < themes.length ? theme_current += 1 : 0
         $("html").removeClass().addClass(themes[theme_current] + "-theme")
-        $("#theme-toggle .theme-text").text(themes[theme_current])        
+        $("#theme-toggle .theme-text").text(themes[theme_current])
+        localStorage.setItem("theme", theme_current)        
     })
 
-    $("#pic-profile").dblclick(function() {
-        $("#pic-profile").fadeTo(200, 0.3, function() {
-            $("#pic-profile").attr("src", "media/profile_altv2.png")
-        }).fadeTo(200, 1);
-        setTimeout(function() {
-            $("#pic-profile").fadeTo(200, 0.3, function() {
-                $("#pic-profile").attr("src", "media/profile.png")
-            }).fadeTo(200, 1);
-        }, 1400)
-    })
+    $('body').css('display', 'none');
+    $('body').fadeIn(1000);
+
+    // $("#pic-profile").dblclick(function() {
+    //     $("#pic-profile").fadeTo(200, 0.3, function() {
+    //         $("#pic-profile").attr("src", "media/profile_altv2.png")
+    //     }).fadeTo(200, 1);
+    //     setTimeout(function() {
+    //         $("#pic-profile").fadeTo(200, 0.3, function() {
+    //             $("#pic-profile").attr("src", "media/profile.png")
+    //         }).fadeTo(200, 1);
+    //     }, 1400)
+    // })
 });
 
 var nav = $("#nav-text"),
