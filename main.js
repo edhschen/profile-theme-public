@@ -1,4 +1,4 @@
-themes = ["paper", "iceberg", "superuser", "horizon", "arch", "shadow", "mountain", "rgb", "infared", "earth", "ocean", "buzz", "shrubs"]
+themes = ["paper", "iceberg", "superuser", "horizon", "arch", "shadow", "mountain", "rgb", "infared", "earth", "ocean", "buzz", "shrubs", "retro", "oblivion", "money"]
 theme_current = 0
 
 $(function() {
@@ -84,3 +84,8 @@ $('.nav-text-link').hover(
         !curr_sec && $(this).removeAttr("selected")
     }
 );
+
+$('.theme-dot').parent().hover(
+    function(){ $(this).addClass(themes[theme_current + 1 < themes.length ? theme_current + 1 : 0] + "-theme") },
+    function(){ $(this).removeClass() }
+)

@@ -1,92 +1,113 @@
-:root.paper-theme {
+.paper-theme {
     --maincolor: #444444;
     --bgcolor: #eeeeee;
     --accentcolor: #b2b2b2;
     --textcolor: #444444;
 }
 
-:root.iceberg-theme {
+.iceberg-theme {
     --maincolor: #2d539e;
     --bgcolor: #e8e9ec;
-    --accentcolor: #262a3f;
+    --accentcolor: #94a5c3;
     --textcolor: #33374c;
 }
 
-:root.superuser-theme {
+.superuser-theme {
     --maincolor: #43ffaf;
     --bgcolor: #262a33;
     --accentcolor: #526777;
     --textcolor: #e5f7ef;
 }
 
-:root.horizon-theme {
+.horizon-theme {
     --maincolor: #db886f;
     --bgcolor: #1C1E26;
     --accentcolor: #c4a88a;
     --textcolor: #bbbbbb;
 }
 
-:root.arch-theme {
+.arch-theme {
     --maincolor: #7ebab5;
     --bgcolor: #0c0d11;
     --accentcolor: #454864;
     --textcolor: #f6f5f5;
 }
 
-:root.shadow-theme {
+.shadow-theme {
     --maincolor: #eee;
     --bgcolor: #000;
     --accentcolor: #444;
     --textcolor: #eee;
 }
 
-:root.mountain-theme {
+.mountain-theme {
     --maincolor: #e7e7e7;
     --bgcolor: #0f0f0f;
     --accentcolor: #4c4c4c;
     --textcolor: #e7e7e7;
 }
 
-:root.rgb-theme {
+.rgb-theme {
     --maincolor: #eee;
     --bgcolor: #111;
     --accentcolor: #444;
     --textcolor: #eee;
 }
 
-:root.infared-theme {
+.infared-theme {
     --maincolor: #932432;
     --bgcolor: #f3f3f3;
     --accentcolor: #d26d7b;
     --textcolor: #283747;
 }
 
-:root.earth-theme {
+.earth-theme {
     --maincolor: #266150;
     --bgcolor: #e8cebf;
     --accentcolor: #ddaf94;
     --textcolor: #4f4846;
 }
 
-:root.ocean-theme {
+.ocean-theme {
     --maincolor: #007cc7;
     --bgcolor: #203647;
     --accentcolor: #4da8da;
     --textcolor: #eefbfb;
 }
 
-:root.buzz-theme {
-    --maincolor: #ffdf6c;
+.buzz-theme {
+    --maincolor: #eaaa00;
     --bgcolor: #ffffff;
-    --accentcolor: #202020;
-    --textcolor: #3f3f3f;
+    --accentcolor: #002233;
+    --textcolor: #697681;
 }
 
-:root.shrubs-theme {
+.shrubs-theme {
     --maincolor: #39603d;
     --bgcolor: #daded4;
     --accentcolor: #a3bcb6;
     --textcolor: #3c403d;
+}
+
+.retro-theme {
+    --maincolor: #1d1b17;
+    --bgcolor: #dad3c1;
+    --accentcolor: #918b7d;
+    --textcolor: #1d1b17;
+}
+
+.oblivion-theme {
+    --maincolor: #a5a096;
+    --bgcolor: #313231;
+    --accentcolor: #5d6263;
+    --textcolor: #f7f5f1;
+}
+
+.money-theme {
+    --maincolor: #6b886b;
+    --bgcolor: #e4e4d4;
+    --accentcolor: #8a9b69;
+    --textcolor: #555a56;
 }
 
 @keyframes rgb {
@@ -130,14 +151,14 @@
     }
 }
 
-:root.rgb-theme h1, :root.rgb-theme .nav-text-link[selected], :root.rgb-theme h3 {
+.rgb-theme h1, .rgb-theme .nav-text-link[selected], .rgb-theme h3 {
     animation-name: rgb;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
-:root.rgb-theme path#logo-curve, :root.rgb-theme .nav-text-link[selected] hr {
+.rgb-theme path#logo-curve, .rgb-theme .nav-text-link[selected] hr, .rgb-theme .theme-dot {
     animation-name: rgb-stroke;
     animation-duration: 5s;
     animation-iteration-count: infinite;

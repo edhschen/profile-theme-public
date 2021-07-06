@@ -1,0 +1,89 @@
+.wrapper {
+    margin-top: 10vh;
+    display: block;
+}
+#content-scroll {
+    overflow-y: initial;
+}
+#content-wrapper {
+    margin-top: 2rem;
+}
+.content-grid {
+    gap: 1rem 4rem;
+}
+
+h1 {
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+}
+
+.text-primary {
+    font-weight: bold;
+    /* font-size: 1rem; */
+}
+.text-secondary {
+    line-height: 1.45rem;
+}
+
+.theme-dot {
+    height: 25px;
+    width: 25px;
+    background-color: var(--maincolor);
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 0.2em;
+}
+#theme-toggle {
+    width: fit-content;
+    height: fit-content;
+    margin-left: 2rem;
+    transform: translate(0, 10px);
+}
+
+#title-wrapper {
+    display: flex;
+    align-items: baseline;
+}
+
+h1::before {
+    opacity: 0.5;
+}
+
+.text-flex {
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+}
+.text-flex > * {
+    margin-right: 3rem;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    body {
+        width: 90%;
+    }
+    .content-grid {
+        display: block;
+    }
+    .text-primary {
+        margin-bottom: 0.25rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .text-flex > * {
+        margin-bottom: 0.5rem;
+    }
+    nav {
+        margin: 2rem 0;
+    }
+    .wrapper {
+        margin-top: 5vh;
+    }
+}

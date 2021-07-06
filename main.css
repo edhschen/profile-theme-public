@@ -77,6 +77,14 @@ p {
 .link:hover path {
     fill: var(--maincolor) !important;
 }
+.text-link {
+    color: var(--accentcolor);
+    text-decoration: none;
+    transition: color 0.1s !important;
+}
+.text-link:hover {
+    color: var(--maincolor);
+}
 
 .text-secondary {
     font-size: 1rem;
@@ -202,6 +210,10 @@ hr {
     flex-direction: column;
     justify-content: center;
     position: relative;
+}
+
+#teaching {
+    margin-top: 3rem;
 }
 
 #title-static {
