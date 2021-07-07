@@ -14,7 +14,11 @@
 
 h1 {
     font-size: 5rem;
-    letter-spacing: 0.2rem;
+    font-family: "Nunito", sans-serif;
+}
+h1::before {
+    bottom: 5%;
+    opacity: 0.5;
 }
 
 .text-primary {
@@ -28,25 +32,22 @@ h1 {
 .theme-dot {
     height: 25px;
     width: 25px;
-    background-color: var(--maincolor);
+    background-color: var(--accentcolor);
     border-radius: 50%;
     display: inline-block;
     margin-top: 0.2em;
+    opacity: 0.5;
 }
 #theme-toggle {
     width: fit-content;
     height: fit-content;
     margin-left: 2rem;
-    transform: translate(0, 10px);
+    transform: translate(0, 12px);
 }
 
 #title-wrapper {
     display: flex;
     align-items: baseline;
-}
-
-h1::before {
-    opacity: 0.5;
 }
 
 .text-flex {
