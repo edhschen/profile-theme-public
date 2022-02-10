@@ -1,11 +1,11 @@
 themes = ["paper", "iceberg", "superuser", "horizon", "arch", "shadow", "mountain", "rgb", "infared", "earth", "ocean", "buzz", "shrubs", "retro", "oblivion", "money"]
-theme_current = 0
+theme_current = 13
 
 $(function() {
     const query = window.location.search;
     const params = new URLSearchParams(query);
     const theme_param = params.get("theme")
-    const preset = theme_param ? themes.indexOf(theme_param) : +localStorage.getItem("theme")
+    const preset = theme_param ? theme_param : (localStorage.getItem("theme") ? +localStorage.getItem("theme") : null)
 
     if (preset >= 0 && typeof preset == "number") {
         $("html").removeClass().addClass(themes[preset] + "-theme")
