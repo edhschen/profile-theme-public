@@ -1,5 +1,6 @@
 themes = ["paper", "iceberg", "superuser", "horizon", "arch", "shadow", "mountain", "rgb", "infared", "earth", "ocean", "buzz", "shrubs", "retro", "oblivion", "money"]
 theme_current = 13
+var style
 
 $(function() {
     const query = window.location.search;
@@ -18,11 +19,16 @@ $(function() {
         theme_current = theme_current + 1 < themes.length ? theme_current += 1 : 0
         $("html").removeClass().addClass(themes[theme_current] + "-theme")
         $("#theme-toggle .theme-text").text(themes[theme_current])
-        localStorage.setItem("theme", theme_current)        
+        localStorage.setItem("theme", theme_current)
+        effect.setOptions({
+            color: new THREE.Color(parseInt (style.getPropertyValue('--accentcolor').replace("#","0x"), 16)),
+            backgroundColor: new THREE.Color(parseInt (style.getPropertyValue('--bgcolor').replace("#","0x"), 16))
+        })        
     })
 
     $('body').css('display', 'none');
     $('body').fadeIn(1000);
+    background_init();
 
     // $("#pic-profile").dblclick(function() {
     //     $("#pic-profile").fadeTo(200, 0.3, function() {
@@ -89,3 +95,22 @@ $('.theme-dot').parent().hover(
     function(){ $(this).addClass(themes[theme_current + 1 < themes.length ? theme_current + 1 : 0] + "-theme") },
     function(){ $(this).removeClass() }
 )
+
+function background_init() {
+    style = getComputedStyle(document.body)
+    effect = VANTA.NET({
+    el: "#background",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: new THREE.Color(parseInt (style.getPropertyValue('--accentcolor').replace("#","0x"), 16)),
+    backgroundColor: new THREE.Color(parseInt (style.getPropertyValue('--bgcolor').replace("#","0x"), 16)),
+    points: 18.00,
+    maxDistance: 20.00,
+    showDots: false
+    })
+}
