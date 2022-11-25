@@ -7,6 +7,11 @@
     src: url('RollingBold.ttf');
 }
 
+@font-face {
+    font-family: 'Newake';
+    src: url('Newake.otf');
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -17,7 +22,7 @@ body {
     width: max(65%, 970px);
     margin: 0 auto;
     max-width: 1200px;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 #body-wrapper, #body-wrapper *:not(.theme-text) {
@@ -25,8 +30,15 @@ body {
     transition-property: stroke, fill, color, background-color, width;
 }
 
+#pic-wrapper {
+    width: 20rem;
+    height: 20rem;
+}
+
 img#pic-profile {
     width: 20rem;
+    max-width: 100%;
+    max-height: 100%;
     /* height: 34.75rem; */
     object-fit: cover;
     user-select: none;
@@ -84,12 +96,12 @@ p {
     fill: var(--maincolor) !important;
 }
 .text-link {
-    color: var(--accentcolor);
+    color: var(--maincolor);
     text-decoration: none;
     transition: color 0.1s !important;
 }
 .text-link:hover {
-    color: var(--maincolor);
+    color: var(--accentcolor);
 }
 
 .text-secondary {
@@ -98,7 +110,7 @@ p {
 
 h1 {
     font-size: 7.25rem;
-    font-family: 'Rolling Bold', sans-serif;
+    font-family: 'Newake', sans-serif;
     color: var(--maincolor);
     width: fit-content;
     width: -moz-fit-content;
@@ -114,7 +126,7 @@ h1::before{
     background-image: linear-gradient(120deg, var(--accentcolor) 0%, var(--accentcolor) 100%);
     position: absolute;
     height: 0.3em;
-    bottom: 15%;
+    bottom: 12%;
     margin-left: 2rem;
     z-index: -1;
     transform: skew(-22.5deg);
@@ -131,7 +143,7 @@ h2 {
 
 h3 {
     font-size: 3rem;
-    font-family: 'Rolling Bold', sans-serif;
+    font-family: 'Newake', sans-serif;
     color: var(--accentcolor);
     margin-bottom: 0.5rem;
 }
@@ -153,7 +165,7 @@ nav, .wrapper {
 }
 
 nav {
-    margin-top: 6rem;
+    padding-top: 6rem;
     margin-bottom: 5rem;
 }
 

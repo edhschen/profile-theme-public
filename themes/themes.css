@@ -164,3 +164,38 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+
+.orange-theme {
+    --maincolor: #fba52d;
+    --bgcolor: #eeeeee;
+    --accentcolor: #ecc583;
+    --textcolor: #444444;
+}
+
+.red-theme {
+    --maincolor: #e3241e;
+    --bgcolor: #eeeeee;
+    --accentcolor: #e59690;
+    --textcolor: #444444;
+}
+
+.blue-theme {
+    --maincolor: #0052a3;
+    --bgcolor: #eeeeee;
+    --accentcolor: #73b6c8;
+    --textcolor: #444444;
+}
+
+.lightblue-theme {
+    --maincolor: #349a9c;
+    --bgcolor: #eeeeee;
+    --accentcolor: #5ac5b2cf;
+    --textcolor: #444444;
+}
+
+.orange-theme {
+    --maincolor: rgb(255,224,196);
+    --bgcolor: #eeeeee;
+    --accentcolor: #ebd7bdad;
+    --textcolor: #444444;
+}

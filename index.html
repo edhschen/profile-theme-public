@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="retro-theme">
+<html lang="en" dir="ltr" class="orange-theme">
 
     <head>
         <title>Ed Chen</title>
@@ -9,11 +9,17 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/victor/1.1.0/victor.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tweakpane@1.3.2/dist/tweakpane.min.js"></script>
         <link rel="stylesheet" type="text/css" href="reset.css">
         <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="bg.css">
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140400165-1"></script>
         <script src="main.js" defer></script>
+        <script src="bg.js" defer></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -24,6 +30,7 @@
     </head>
 
     <body id="background">
+        <canvas id="c"></canvas>
         <div id="body-wrapper">
         <nav>
             <div id="logo">
@@ -36,10 +43,12 @@
 
         <div class="wrapper">
             <div id="title-static">
-                <h1>Ed Chen.</h1>
+                <h1>Ed Chen</h1>
                 <h2>computational science & maths</h2>
                 <div id="nav-wrapper">
-                    <img id="pic-profile" src="media/profile.jpg">                
+                    <!-- <div id="pic-wrapper"> -->
+                        <img id="pic-profile" src="media/origami_orange.png">                
+                    <!-- </div> -->
                     <div id="nav-text">
                         <a class="nav-text-link" href="#about" selected><hr/>about</a>
                         <a class="nav-text-link" href="#interests"><hr/>interests</a>
@@ -55,13 +64,13 @@
                     <div id="about" class="content-section">
                         <h3>01. About</h3>
                         <p>
-                            My interests lie broadly in <a class="text-link" href="https://en.wikipedia.org/wiki/Numerical_method" target="_blank">high-fidelity numerical methods</a> and their applications modeling dynamical systems found in natural phenomena and engineering environments. Recent work on problems with efficient hydrodynamic simulation methods in aerodynamics.
+                            I am a graduate student at <a class="text-link" href="https://stanford.edu" target="_blank">Stanford University</a> studying Computational and Mathematical Engineering. My research interests surround developing <a class="text-link" href="https://en.wikipedia.org/wiki/Numerical_method" target="_blank">high-order numerical methods</a> and their applications modeling dynamical systems found in natural phenomena and engineering environments.
                             <br><br>
-                            I studied computational science and applied mathematics with their surrounding uses in various scientific fields from Georgia Tech and UC Berkeley. Currently <a class="text-link" href="https://www.gatech.edu/" target="_blank">Georgia Tech</a> Math & EE and <a class="text-link" href="https://juliacomputing.com/products/juliasim/" target="_blank">Modeling and Simulation</a> @ <a class="text-link" href="https://juliacomputing.com/" target="_blank">Julia Computing</a>
+                            I studied computational science and applied mathematics with their surrounding uses in various scientific fields from Georgia Tech and UC Berkeley in undergrad. In the past, I have worked with <a class="text-link" href="https://www.nas.nasa.gov/index.html" target="_blank">NASA Supercomputing</a>, <a class="text-link" href="https://juliacomputing.com/" target="_blank">Julia Computing</a>, and various university labs.
                         </p>
                     </div>
                     <div id="interests" class="content-section">
-                        <h3>02. Interests</h3>
+                        <h3>02. Research Interests</h3>
                         <div class="content-block">
                             <p class="text-primary">High-Fidelity Numerical Methods</p>
                             <p class="text-secondary">Numerical solutions and continuous simulation of differential equations arising from physical systems</p>
@@ -71,8 +80,8 @@
                             <p class="text-secondary">Fast iterative methods and preconditioners as applied to large matrix computations using high-performance computing</p>
                         </div>
                         <div class="content-block">
-                            <p class="text-primary">Adaptive Mesh Refinement</p>
-                            <p class="text-secondary">Unstructured and structured methods of increasing resolution at regions of interest for computational saving</p>
+                            <p class="text-primary">Mesh Generation</p>
+                            <p class="text-secondary">Unstructured and structured methods of developing curvlinear meshes for high-order numericalmethods</p>
                         </div>
                         <div class="content-block">
                             <p class="text-primary">Computational Hydrodynamics</p>
@@ -81,10 +90,6 @@
                         <div class="content-block">
                             <p class="text-primary">Network Simulation</p>
                             <p class="text-secondary">Optimizing communication networks with discrete event simulation of distributed edge computing architectures</p>
-                        </div>
-                        <div class="content-block">
-                            <p class="text-primary">Analytical Mathematics</p>
-                            <p class="text-secondary">Analytical methods for problems and equations arising in physical science and engineering</p>
                         </div>
                     </div>
                     <div id="work" class="content-section">
@@ -252,7 +257,7 @@
                         <h3>06. Contact</h3>
                         <div class="content-grid">
                             <p class="text-secondary">Email</p>
-                            <p class="text-secondary text-name">edhschen [at] gatech [dot] edu</p>
+                            <p class="text-secondary text-name">edhschen [at] stanford [dot] edu</p>
 
                             <p class="text-secondary">Website</p>
                             <p class="text-secondary text-name">edhschen [dot] info</p>
