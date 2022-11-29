@@ -84,7 +84,7 @@ var nav = $("#nav-text"),
 var curr_scroll
 navItems.click(function(e){
     var href = $(this).attr("href"),
-        offsetTop = href === "#" ? 0 : $(href).position().top + $(href).parent().scrollTop();
+        offsetTop = href === "#" ? 0 : $(href).position().top + $(href).parent().scrollTop() - $(href).parent().height()/2 + $(href).height()/2;
     // console.log(href, offsetTop)
     curr_scroll = undefined
     $('#content-scroll').stop().animate({ 
