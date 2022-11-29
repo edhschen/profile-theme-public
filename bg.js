@@ -32,7 +32,7 @@ class App {
       bgColor: chroma({ h: 230, s: 0.5, l: 0.92}).hex(),
       // https://www.colourlovers.com/palette/577622/One_Sixty-Eight
       colorSchema: colors,
-      numOfLayers: 4
+      numOfLayers: 5
     }
 
     // color: blue

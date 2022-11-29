@@ -30,28 +30,30 @@
     </head>
 
     <body id="background">
-        <canvas id="c"></canvas>
+        <!-- <canvas id="c"></canvas> -->
         <div id="body-wrapper">
-        <nav>
+        <!-- <nav>
             <div id="logo">
                 <svg width="53" height="33" viewBox="0 0 53 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 28.875L0 33H4.125H28.875H33L38.5 33H39.875H48.125H52.25V28.875L48.125 28.875H42.625V23.375L48.125 23.375V28.875L52.25 28.875V23.375V19.25V0L33 0H28.875H0L0 28.875ZM33 28.875H38.5V23.375H33V28.875ZM33 4.125H48.125V19.25L42.625 19.25H38.5H33H28.875V23.375V28.875L4.125 28.875L4.125 4.125L28.875 4.125L28.875 19.25H33V4.125Z" fill="var(--accentcolor)"/>
                     <path d="M2.0625 30.9375C2.0625 2.0625 30.9375 2.0625 30.9375 2.0625C44 2.0625 50.1875 12.375 50.1875 21.3125C50.1875 30.9375 40.5625 30.9375 40.5625 30.9375C40.5625 30.9375 30.9375 30.9375 30.9375 21.3125" stroke="var(--maincolor)" stroke-width="4.125" stroke-linecap="square" id="logo-curve"/>
                 </svg>                                        
             </div>
-        </nav>
+        </nav> -->
 
         <div class="wrapper">
             <div id="title-static">
-                <h1>Ed Chen</h1>
+                <h1>Ed Chen.</h1>
                 <h2>computational science & maths</h2>
                 <div id="nav-wrapper">
                     <!-- <div id="pic-wrapper"> -->
-                        <img id="pic-profile" src="media/origami_orange.png">                
+                        <img id="pic-profile" src="media/profile_yosemite.jpeg">                
                     <!-- </div> -->
                     <div id="nav-text">
                         <a class="nav-text-link" href="#about" selected><hr/>about</a>
+                        <a class="nav-text-link" href="#news"><hr/>news</a>
                         <a class="nav-text-link" href="#interests"><hr/>interests</a>
+                        <a class="nav-text-link" href="#education"><hr/>education</a>
                         <a class="nav-text-link" href="#work"><hr/>work</a>
                         <a class="nav-text-link" href="#projects"><hr/>projects</a>
                         <a class="nav-text-link" href="#teaching"><hr/>teaching</a>
@@ -66,36 +68,79 @@
                         <p>
                             I am a graduate student at <a class="text-link" href="https://stanford.edu" target="_blank">Stanford University</a> studying Computational and Mathematical Engineering. My research interests surround developing <a class="text-link" href="https://en.wikipedia.org/wiki/Numerical_method" target="_blank">high-order numerical methods</a> and their applications modeling dynamical systems found in natural phenomena and engineering environments.
                             <br><br>
-                            I studied computational science and applied mathematics with their surrounding uses in various scientific fields from Georgia Tech and UC Berkeley in undergrad. In the past, I have worked with <a class="text-link" href="https://www.nas.nasa.gov/index.html" target="_blank">NASA Supercomputing</a>, <a class="text-link" href="https://juliacomputing.com/" target="_blank">Julia Computing</a>, and various university labs.
+                            I studied computational science and applied mathematics with their surrounding uses in various scientific fields from Georgia Tech and UC Berkeley in undergrad. In the past, I have been fortunate to work with <a class="text-link" href="https://www.nas.nasa.gov/index.html" target="_blank">NASA Supercomputing</a>, <a class="text-link" href="https://juliacomputing.com/" target="_blank">Julia Computing</a>, and various university labs. I am currently applying to PhD programs for Fall 2023 entry.
                         </p>
                     </div>
+                    <div id="news" class="content-section">
+                        <!-- <div class="sidetag"><span>News</span></div> -->
+                        <h3>02. Recent News</h3>
+                        <div class="content-grid">
+                            <p class="text-secondary">11.28.2022</p>
+                            <p class="text-secondary text-name">Funded through CA position for <a class="text-link" href="https://cs448b.stanford.edu">CS 448B: Graduate Data Visualization</a></p>
+
+                            <p class="text-secondary">09.30.2022</p>
+                            <p class="text-secondary text-name">Funded through CA position for <a class="text-link" href="https://gfxcourses.stanford.edu/cs149/fall22">CS 149: Parallel Programming</a></p>
+
+                            <p class="text-secondary">04.15.2022</p>
+                            <p class="text-secondary text-name">Accepted <span class="text-color" style="color:#8C1515;">Stanford</span> MS Offer in <a class="text-link" href="https://icme.stanford.edu/">ICME</a></p>
+
+                            <p class="text-secondary">03.15.2022</p>
+                            <p class="text-secondary text-name">Recieved 
+                                <span class="text-color" style="color:#00205B;">Rice</span> PhD Offer, 
+                                <span class="text-color" style="color:#8C1515;">Stanford</span>, 
+                                <span class="text-color" style="color:#57068c;">NYU</span>, 
+                                <span class="text-color" style="color:#4b2e83;">UW</span> MS Offers</p>
+                        </div>
+                    </div>
                     <div id="interests" class="content-section">
-                        <h3>02. Research Interests</h3>
+                        <h3>03. Research Interests</h3>
                         <div class="content-block">
                             <p class="text-primary">High-Fidelity Numerical Methods</p>
-                            <p class="text-secondary">Numerical solutions and continuous simulation of differential equations arising from physical systems</p>
+                            <p class="text-secondary">Mathematical formulations and tools towards developing efficient and accurate high-order numerical methods for continuous simulation of partial differential equations</p>
                         </div>
                         <div class="content-block">
                             <p class="text-primary">Efficient Parallel Algorithms</p>
-                            <p class="text-secondary">Fast iterative methods and preconditioners as applied to large matrix computations using high-performance computing</p>
+                            <p class="text-secondary">Fast iterative methods and preconditioners as applied to large matrix computations using new parallel programming toolkits across both CPU and GPU systems</p>
                         </div>
                         <div class="content-block">
                             <p class="text-primary">Mesh Generation</p>
-                            <p class="text-secondary">Unstructured and structured methods of developing curvlinear meshes for high-order numericalmethods</p>
-                        </div>
-                        <div class="content-block">
-                            <p class="text-primary">Computational Hydrodynamics</p>
-                            <p class="text-secondary">Fluid behavior simulation across environments in aerospace engineering, transport, and astrophysics</p>
+                            <p class="text-secondary">Unstructured and structured methods of developing curvlinear meshes for the use of high-order numerical methods, as well as associated adaptive mesh refinement procedures</p>
                         </div>
                         <div class="content-block">
                             <p class="text-primary">Network Simulation</p>
-                            <p class="text-secondary">Optimizing communication networks with discrete event simulation of distributed edge computing architectures</p>
+                            <p class="text-secondary">Optimizing communication networks with discrete event simulation of distributed edge computing architectures and induced compute load from IOT jobs</p>
+                        </div>
+                    </div>
+                    <div id="education" class="content-section">
+                        <h3>04. Education</h3>
+                        <div class="content-grid">
+                            <p class="text-secondary">2022-Now</p>
+                            <p class="text-primary">Stanford University</p>
+                            <p class="text-secondary text-descrip">MS Computational and Mathematical Engineering</p>
+
+                            <p class="text-secondary">2020-2022</p>
+                            <p class="text-primary">Georgia Tech</p>
+                            <p class="text-secondary text-descrip">BS Mathematics</p>
+
+                            <p class="text-secondary">2018-2020</p>
+                            <p class="text-primary">UC Berkeley</p>
+
                         </div>
                     </div>
                     <div id="work" class="content-section">
-                        <h3>03. Work</h3>
+                        <h3>05. Work</h3>
                         <div class="content-grid">
-                            <p class="text-secondary">2021-Now</p>
+                            <p class="text-secondary">2022-Now</p>
+                            <p class="text-primary">Stanford University
+                                <a class="link" href="https://stanford.edu/" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.001 20H6.00101C4.89644 20 4.00101 19.1046 4.00101 18V7C4.00101 5.89543 4.89644 5 6.00101 5H10.001V7H6.00101V18H17.001V14H19.001V18C19.001 19.1046 18.1056 20 17.001 20ZM11.701 13.707L10.291 12.293L16.584 6H13.001V4H20.001V11H18.001V7.415L11.701 13.707Z" fill="var(--accentcolor)"/>
+                                    </svg>
+                                </a>
+                            </p>
+                            <p class="text-secondary text-descrip">Course Assistant, Department of CS</p>
+
+                            <p class="text-secondary">2021-2022</p>
                             <p class="text-primary">Julia Computing
                                 <a class="link" href="https://juliacomputing.com/" target="_blank">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +150,7 @@
                             </p>
                             <p class="text-secondary text-descrip">Modeling and Simulation Intern, JuliaSim</p>
 
-                            <p class="text-secondary">2021-Now</p>
+                            <p class="text-secondary">2021-2022</p>
                             <p class="text-primary">Georgia Tech
                                 <a class="link" href="https://gatech.edu/" target="_blank">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -150,8 +195,17 @@
                     </div>
 
                     <div id="projects" class="content-section">
-                        <h3>04. Projects</h3>
+                        <h3>06. Projects</h3>
                         <div class="content-grid">
+                            <p class="text-secondary">2022</p>
+                            <p class="text-secondary text-name">Task-based Parallel Multigrid and Adaptive Mesh Refinement FEM Solver</p>
+                            
+                            <p class="text-secondary">2022</p>
+                            <p class="text-secondary text-name">Space Mission Logistics Discrete Event Simulation Framework</p>
+
+                            <p class="text-secondary">2022</p>
+                            <p class="text-secondary text-name">Intersectional Demographic Regression Analysis of University Employee Salaries</p>
+
                             <p class="text-secondary">2021</p>
                             <p class="text-secondary text-name">Portable OpenMP CPU/GPU Parallelization of Iterative Methods</p>
 
@@ -185,8 +239,28 @@
                     </div>
 
                     <div id="teaching" class="content-section">
-                        <h3>05. Teaching</h3>
+                        <h3>07. Teaching</h3>
                         <div class="content-grid">
+                            <p class="text-secondary">Wi 2023</p>
+                            <p class="text-primary">CS 448B
+                                <a class="link" href="https://cs448b.stanford.edu" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.001 20H6.00101C4.89644 20 4.00101 19.1046 4.00101 18V7C4.00101 5.89543 4.89644 5 6.00101 5H10.001V7H6.00101V18H17.001V14H19.001V18C19.001 19.1046 18.1056 20 17.001 20ZM11.701 13.707L10.291 12.293L16.584 6H13.001V4H20.001V11H18.001V7.415L11.701 13.707Z" fill="var(--accentcolor)"/>
+                                    </svg>
+                                </a>
+                            </p>
+                            <p class="text-secondary text-descrip">Course Assistant, Graduate Data Visualization</p>
+
+                            <p class="text-secondary">Au 2022</p>
+                            <p class="text-primary">CS 149
+                                <a class="link" href="https://cs149.stanford.edu/" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.001 20H6.00101C4.89644 20 4.00101 19.1046 4.00101 18V7C4.00101 5.89543 4.89644 5 6.00101 5H10.001V7H6.00101V18H17.001V14H19.001V18C19.001 19.1046 18.1056 20 17.001 20ZM11.701 13.707L10.291 12.293L16.584 6H13.001V4H20.001V11H18.001V7.415L11.701 13.707Z" fill="var(--accentcolor)"/>
+                                    </svg>
+                                </a>
+                            </p>
+                            <p class="text-secondary text-descrip">Course Assistant, Parallel Computing</p>
+
                             <p class="text-secondary">Sp 2022</p>
                             <p class="text-primary">Math 6321</p>
                             <p class="text-secondary text-descrip">Grader, Graduate Complex Analysis</p>
@@ -199,11 +273,11 @@
                                     </svg>
                                 </a>
                             </p>
-                            <p class="text-secondary text-descrip">Head TA, Graduate Data and Visual Analytics</p>
+                            <p class="text-secondary text-descrip">Head Teaching Assistant, Graduate Data and Visual Analytics</p>
 
                             <p class="text-secondary">Fa 2021</p>
                             <p class="text-primary">CSE 6242</p>
-                            <p class="text-secondary text-descrip">TA, Graduate Data and Visual Analytics</p>
+                            <p class="text-secondary text-descrip">Teaching Assistant, Graduate Data and Visual Analytics</p>
 
                             <p class="text-secondary">Fa 2021</p>
                             <p class="text-primary">Math 121A</p>
@@ -254,7 +328,7 @@
                     </div>
 
                     <div id="contact" class="content-section">
-                        <h3>06. Contact</h3>
+                        <h3>08. Contact</h3>
                         <div class="content-grid">
                             <p class="text-secondary">Email</p>
                             <p class="text-secondary text-name">edhschen [at] stanford [dot] edu</p>

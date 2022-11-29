@@ -19,9 +19,10 @@ body {
 }
 
 #body-wrapper {
-    width: max(65%, 970px);
+    width: max(75%, 970px);
     margin: 0 auto;
-    max-width: 1200px;
+    /* max-width: 1200px; */
+    /* margin-left: 15%; */
     /* overflow: auto; */
 }
 
@@ -38,11 +39,34 @@ body {
 img#pic-profile {
     width: 20rem;
     max-width: 100%;
+    height: 20rem;
     max-height: 100%;
     /* height: 34.75rem; */
     object-fit: cover;
     user-select: none;
     align-self: flex-start;
+    /* -webkit-filter: grayscale(30%); */
+    /* filter: grayscale(30%); */
+    /* opacity: 0.8; */
+    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+    animation: blob 3.7s linear infinite;
+}
+
+@keyframes blob {
+    0%, 100% {
+        border-radius:
+            42% 56% 72% 28% / 42% 42% 56% 48%;
+    }
+
+    33% {
+        border-radius:
+            42% 28% 48% 48% / 28% 28% 72% 72%;
+    }
+
+    66% {
+        border-radius:
+            100% 56% 56% 100% / 100% 100% 56% 56%;
+    }
 }
 
 .nav-text-link, p {
@@ -96,12 +120,12 @@ p {
     fill: var(--maincolor) !important;
 }
 .text-link {
-    color: var(--maincolor);
-    text-decoration: none;
+    color: var(--accentcolor);
+    text-decoration: underline;
     transition: color 0.1s !important;
 }
 .text-link:hover {
-    color: var(--accentcolor);
+    color: var(--maincolor);
 }
 
 .text-secondary {
@@ -110,7 +134,7 @@ p {
 
 h1 {
     font-size: 7.25rem;
-    font-family: 'Newake', sans-serif;
+    font-family: 'Rolling Bold', sans-serif;
     color: var(--maincolor);
     width: fit-content;
     width: -moz-fit-content;
@@ -120,6 +144,7 @@ h1 {
     background-repeat: no-repeat;
     background-size: 100% 0.3em;
     background-position: 0 72%; */
+    padding-left: 1rem;
 }
 h1::before{
     content: "";
@@ -132,6 +157,16 @@ h1::before{
     transform: skew(-22.5deg);
     width: 95%;
 }
+.arch-theme h1 {
+    background: -webkit-linear-gradient(45deg, #48c6ef, #6f86d6 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.paper-theme h1 {
+    background: -webkit-linear-gradient(45deg, #63696d, #2c3e50 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 h2 {
     font-size: 1.5rem;
@@ -143,7 +178,7 @@ h2 {
 
 h3 {
     font-size: 3rem;
-    font-family: 'Newake', sans-serif;
+    font-family: 'Rolling Bold', sans-serif;
     color: var(--accentcolor);
     margin-bottom: 0.5rem;
 }
@@ -157,11 +192,12 @@ h3 {
 
 nav, .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 520px 1fr;
     gap: 5rem;
 }
 .wrapper {
     margin-bottom: 3rem;
+    height: 100vh;
 }
 
 nav {
@@ -206,7 +242,9 @@ hr {
     height: inherit; */
     display: flex;
     flex-direction: column;
-
+    mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
+    margin: 1rem 0;
 }
 #content-scroll {
     overflow-y: scroll;
@@ -237,6 +275,7 @@ hr {
 
 #title-static {
     min-width: 0;
+    align-self: center;
 }
 
 .content-grid {
@@ -266,6 +305,13 @@ hr {
     display: flex;
     flex-wrap: wrap;
 }
+.text-name {
+    grid-column: 2;
+}
+.text-color {
+    font-weight: 500;
+    margin-right: 0 !important;
+}
 
 /* #contact {
     min-height: 0;
@@ -273,5 +319,8 @@ hr {
 } */
 
 #about {
-    min-height: 100%;
+    min-height: calc(100% - 2rem);
+}
+#contact {
+    margin-bottom: 30%;
 }

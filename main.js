@@ -1,5 +1,6 @@
 themes_main = ["paper", "iceberg", "superuser", "horizon", "arch", "shadow", "mountain", "rgb", "infared", "earth", "ocean", "buzz", "shrubs", "retro", "oblivion", "money"]
 themes_origami = ["orange", "blue", "red", "lightblue"]
+themes_update = ["arch", "paper"]
 themes_spectrum = {
     "orange": ["#ff9100", "#ff7804"],
     "orange3": ["#fd963f",
@@ -18,14 +19,20 @@ themes_spectrum = {
             "#ef233c"],
     "lightblue": ['#b2faec',
         '#cbf5f3',
-        '#a8eef0']
+        '#a8eef0'],
+    "arch" : ['#101116',
+              '#141519',
+              '#0c0d11'],
+    "paper": ['#F1EFEF',
+              '#E9E8E8',
+              '#EEEEEE']
 }
 sections = ["about", "interests", "work", "projects", "teaching"]
 theme_current = 0
 var style
 var bg
 
-themes = [...themes_origami]
+themes = [...themes_update]
 
 $(function() {
     const query = window.location.search;
@@ -36,8 +43,8 @@ $(function() {
     if (preset >= 0 && typeof preset == "number") {
         $("html").removeClass().addClass(themes[preset] + "-theme")
         $("#theme-toggle .theme-text").text(themes[preset])
-        $("#pic-profile").attr("src", "media/origami_"+themes[preset]+".png");
-        new App(themes_spectrum[themes[preset]])
+        // $("#pic-profile").attr("src", "media/origami_"+themes[preset]+".png");
+        // new App(themes_spectrum[themes[preset]])
         localStorage.setItem("theme", preset)
         theme_current = preset
     } else {
@@ -52,7 +59,7 @@ $(function() {
 
     $('body').css('display', 'none');
     $('body').fadeIn(1000);
-    // background_init();
+    background_init();
 
     // $("#pic-profile").dblclick(function() {
     //     $("#pic-profile").fadeTo(200, 0.3, function() {
@@ -114,8 +121,11 @@ $('.nav-text-link').hover(
         $(this).attr("selected", "");
     }, 
     function() {
-        console.log(curr_scroll)
-        if ($(this).attr("href") != curr_scroll) {
+        // console.log(curr_scroll)
+        console.log($(this).attr("id"))
+        if (($(this).attr("href") != curr_scroll) || ($(this).attr("id") == "theme-toggle")) {
+            // console.log($(this))
+            // console.log($(this).attr("id"), " removed select")
             !curr_sec && $(this).removeAttr("selected")
         }
     }
@@ -150,17 +160,18 @@ function change_theme(theme_current) {
     $("html").removeClass().addClass(themes[theme_current] + "-theme")
     $("#theme-toggle .theme-text").text(themes[theme_current])
     localStorage.setItem("theme", theme_current)
-    $("#pic-profile").attr("src", "media/origami_"+themes[theme_current]+".png");
+    // $("#pic-profile").attr("src", "media/origami_"+themes[theme_current]+".png");
     // $("#c").getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
-    $("#c").remove()
-    $("body").append($('<canvas/>',{id: 'c'}))
+    // $("#c").remove()
+    // $("body").append($('<canvas/>',{id: 'c'}))
     // const canvas = document.getElementById("c")
     // const context = canvas.getContext('2d');
     // context.clearRect(0, 0, canvas.width, canvas.height);
-    delete bg
-    bg = new App(themes_spectrum[themes[theme_current]])
-    // effect.setOptions({
-    //     color: new THREE.Color(parseInt (style.getPropertyValue('--accentcolor').replace("#","0x"), 16)),
-    //     backgroundColor: new THREE.Color(parseInt (style.getPropertyValue('--bgcolor').replace("#","0x"), 16))
-    // }) 
+    // delete bg
+    // bg = new App(themes_spectrum[themes[theme_current]])
+    console.log(parseInt (style.getPropertyValue('--accentcolor').replace("#","0x"), 16))
+    effect.setOptions({
+        color: new THREE.Color(parseInt (style.getPropertyValue('--accentcolor').replace("#","0x"), 16)),
+        backgroundColor: new THREE.Color(parseInt (style.getPropertyValue('--bgcolor').replace("#","0x"), 16))
+    }) 
 }
