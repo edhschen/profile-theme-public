@@ -50,7 +50,7 @@ $(function() {
         theme_current = preset
     } else {
         $("html").removeClass().addClass(themes[0] + "-theme")
-        bg = new App(themes_spectrum[themes[0]])
+        // bg = new App(themes_spectrum[themes[0]])
     }
 
     $("#theme-toggle").click(function() {
