@@ -31,6 +31,7 @@ sections = ["about", "interests", "work", "projects", "teaching"]
 theme_current = 0
 var style
 var bg
+var effect
 
 themes = [...themes_update]
 

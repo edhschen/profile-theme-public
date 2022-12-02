@@ -48,8 +48,8 @@ img#pic-profile {
     /* -webkit-filter: grayscale(30%); */
     /* filter: grayscale(30%); */
     /* opacity: 0.8; */
-    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
-    animation: blob 3.7s linear infinite;
+    /* border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%; */
+    /* animation: blob 3.7s linear infinite; */
 }
 
 @keyframes blob {
