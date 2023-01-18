@@ -104,6 +104,7 @@ p {
 
 .text-primary {
     color: var(--accentcolor);
+    font-weight: 600;
     display: flex;
     align-items:  center;
 }
@@ -154,17 +155,20 @@ h1::before{
     bottom: 12%;
     margin-left: 2rem;
     z-index: -1;
+    opacity: 0.75;
     transform: skew(-22.5deg);
     width: 95%;
 }
 .arch-theme h1 {
     background: -webkit-linear-gradient(45deg, #48c6ef, #6f86d6 80%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .paper-theme h1 {
     background: -webkit-linear-gradient(45deg, #63696d, #2c3e50 80%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -212,11 +216,11 @@ nav {
     align-self: flex-end;
 }
 
-#content-scroll {
+/* #content-scroll {
     /* margin: auto 0; */
     /* margin-top: 20%;
-    width: max(50%, 30rem) */
-}
+    width: max(50%, 30rem) 
+} */
 
 hr {
     margin-right: 0.5rem;

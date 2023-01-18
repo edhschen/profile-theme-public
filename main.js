@@ -43,7 +43,7 @@ $(function() {
 
     if (preset >= 0 && typeof preset == "number") {
         $("html").removeClass().addClass(themes[preset] + "-theme")
-        $("#theme-toggle .theme-text").text(themes[preset])
+        // $("#theme-toggle .theme-text").text(themes[preset])
         // $("#pic-profile").attr("src", "media/origami_"+themes[preset]+".png");
         // new App(themes_spectrum[themes[preset]])
         localStorage.setItem("theme", preset)
@@ -120,9 +120,11 @@ $('.nav-text-link').hover(
         curr_sec = $(this).attr("selected")
         // console.log(curr_sec)
         $(this).attr("selected", "");
+        $("#theme-toggle .theme-text").text(themes[theme_current])
     }, 
     function() {
         // console.log(curr_scroll)
+        $("#theme-toggle .theme-text").text("theme")
         console.log($(this).attr("id"))
         if (($(this).attr("href") != curr_scroll) || ($(this).attr("id") == "theme-toggle")) {
             // console.log($(this))

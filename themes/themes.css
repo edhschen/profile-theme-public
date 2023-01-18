@@ -1,7 +1,8 @@
 .paper-theme {
     --maincolor: #444444;
     --bgcolor: #eeeeee;
-    --accentcolor: #b2b2b2;
+    /* --accentcolor: #b2b2b2; */
+    --accentcolor: #8f8f8f;
     --textcolor: #444444;
 }
 
