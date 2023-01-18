@@ -1,6 +1,6 @@
 themes_main = ["paper", "iceberg", "superuser", "horizon", "arch", "shadow", "mountain", "rgb", "infared", "earth", "ocean", "buzz", "shrubs", "retro", "oblivion", "money"]
 themes_origami = ["orange", "blue", "red", "lightblue"]
-themes_update = ["arch", "paper"]
+themes_update = ["paper", "arch"]
 themes_spectrum = {
     "orange": ["#ff9100", "#ff7804"],
     "orange3": ["#fd963f",

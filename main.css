@@ -324,3 +324,52 @@ hr {
 #contact {
     margin-bottom: 30%;
 }
+
+@media (max-width: 1000px) {
+    nav, .wrapper {
+        display: block;
+        width: 85%;
+        margin: 0 auto;
+    }
+    body {
+        overflow: scroll !important;
+    }
+    #body-wrapper {
+        width: auto;
+    }
+    #content-wrapper {
+        display: block;
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+    #contact {
+        margin-bottom: 10%;
+    }
+    #title-static {
+        padding-top: 4rem;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .vanta-canvas, #nav-text {
+        display: none;
+    }
+    h1 {
+        font-size: 6rem;
+    }
+    .content-grid {
+        display: block;
+    }
+    .text-primary, .text-secondary {
+        margin-top: 0 !important;
+    }
+    .text-descrip, .text-name {
+        margin-bottom: 1rem;
+    }
+    [class="text-secondary"] {
+        font-style: italic;
+        font-weight: 700;
+    }
+    #interests .text-secondary {
+        font-weight: normal;
+    }
+}
