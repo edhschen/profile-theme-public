@@ -1,4 +1,4 @@
-console.clear()
+// console.clear()
 
 class Utils {
   static randomRange(min, max) {

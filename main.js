@@ -84,13 +84,16 @@ var nav = $("#nav-text"),
 
 var curr_scroll
 navItems.click(function(e){
+    if ($(this).hasClass("nav-external-link")){
+        $(this).removeAttr("selected")
+    }
     var href = $(this).attr("href"),
         offsetTop = href === "#" ? 0 : $(href).position().top + $(href).parent().scrollTop() - $(href).parent().height()/2 + $(href).height()/2;
     // console.log(href, offsetTop)
     curr_scroll = undefined
     $('#content-scroll').stop().animate({ 
         scrollTop: offsetTop
-    }, 500);
+    }, 700);
     e.preventDefault();
     curr_scroll = href
     // $(this).attr("selected", "")
@@ -120,13 +123,15 @@ $('.nav-text-link').hover(
         curr_sec = $(this).attr("selected")
         // console.log(curr_sec)
         $(this).attr("selected", "");
-        $("#theme-toggle .theme-text").text(themes[theme_current])
+        if ($(this).attr("id") == "theme-toggle"){
+            $("#theme-toggle .theme-text").text(themes[theme_current])
+        }
     }, 
     function() {
         // console.log(curr_scroll)
         $("#theme-toggle .theme-text").text("theme")
-        console.log($(this).attr("id"))
-        if (($(this).attr("href") != curr_scroll) || ($(this).attr("id") == "theme-toggle")) {
+        // console.log($(this).attr("id"))
+        if (($(this).attr("href") != curr_scroll) || ($(this).attr("id") == "theme-toggle") || ($(this).hasClass("nav-external-link"))) {
             // console.log($(this))
             // console.log($(this).attr("id"), " removed select")
             !curr_sec && $(this).removeAttr("selected")
